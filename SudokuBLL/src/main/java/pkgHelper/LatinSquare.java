@@ -29,10 +29,12 @@ public class LatinSquare {
 
 	public boolean doesElementExist(int iValue) {
 
-		for (int i : myLatinSquare) {
-
-			if (i == iValue)
-				return true;
+		for (int[] i : myLatinSquare) {
+			for (int j : i) {
+				
+				if (j == iValue)
+					return true;
+			}
 		}
 		return false;
 	}
